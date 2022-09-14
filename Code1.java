@@ -1,12 +1,12 @@
 import java.io.IOException;
 import java.util.Scanner; 
-public class Main {
+public class Code1 {
  
     public static void main(String[] args) throws IOException {
  
       
       Scanner input = new Scanner(System.in);
-      //Sphere calculation
+      //How to do a Sphere calculation
       
       double R = input.nextDouble();//inputing a Radius variable
       final double pi =3.14159;//Constant of pi with 5 places decimal
