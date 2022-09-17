@@ -1,5 +1,5 @@
 # 1-to-100-challenge
-The objective of "1 to 100 challenge" if to find some programming problems to solve
+The objective of "1 to 100 challenge" is to find some programming problems to solve just with Java or Python
 
 Code 1 - Sphere Calculation - With Java<br />
 Code 2 - Area of Mathematical Forms - With Java<br />
