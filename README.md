@@ -12,3 +12,5 @@ Code 8 - Banknotes - With Java<br />
 Code 9 - Time Conversion - With Java <br />
 Code 10 - Age in Days - With Java<br />
 Code 11 - Salary with Bonus - With Python<br />
+Code 12 - Formula of Bhaskara - With Python<br />
+Code 21 - Selection Teste - With Java<br />
