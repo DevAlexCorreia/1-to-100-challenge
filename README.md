@@ -18,3 +18,4 @@ Code 14 - Average - With Python<br />
 Code 15 - Coordinates of a Point - With Python<br />
 Code 21 - Selection Teste - With Java<br />
 Code 22 - Interval - With Java<br />
+Code 23 - Triangle - With Java<br />
