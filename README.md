@@ -16,6 +16,7 @@ Code 12 - Formula of Bhaskara - With Python<br />
 Code 13 - Banknotes with Coins - With Python<br />
 Code 14 - Average - With Python<br />
 Code 15 - Coordinates of a Point - With Python<br />
+Code 16 - Multiples - With Python<br />
 Code 21 - Selection Teste - With Java<br />
 Code 22 - Interval - With Java<br />
 Code 23 - Triangle - With Java<br />
