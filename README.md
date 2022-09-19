@@ -18,6 +18,7 @@ Code 14 - Average - With Python<br />
 Code 15 - Coordinates of a Point - With Python<br />
 Code 16 - Multiples - With Python<br />
 Code 17 - Triangle Types - With Python<br />
+Code 18 - Game Time - With Python<br />
 Code 21 - Selection Teste - With Java<br />
 Code 22 - Interval - With Java<br />
 Code 23 - Triangle - With Java<br />
