@@ -24,3 +24,4 @@ Code 22 - Interval - With Java<br />
 Code 23 - Triangle - With Java<br />
 Code 24 - Multiplicatite times 2, 5 times and sum all results - With Java<br />
 Code 25 - Even Numbers - With Java<br />
+Code 26 - Positive Numbers - With Java<br />
