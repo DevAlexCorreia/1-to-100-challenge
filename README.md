@@ -23,3 +23,4 @@ Code 21 - Selection Teste - With Java<br />
 Code 22 - Interval - With Java<br />
 Code 23 - Triangle - With Java<br />
 Code 24 - Multiplicatite times 2, 5 times and sum all results - With Java<br />
+Code 25 - Even Number - With Java<br />
