@@ -26,3 +26,5 @@ Code 24 - Multiplicatite times 2, 5 times and sum all results - With Java<br />
 Code 25 - Even Numbers - With Java<br />
 Code 26 - Positive Numbers - With Java<br />
 Code 27 - Positive Numbers with Average - With Java<br />
+Code 28 - Even,Odd,Positive,Negative - With Java<br />
+Code 29 - <br />
