@@ -1,0 +1,25 @@
+def BMI(height,weight):
+  bmi = weight/height**2
+  def msg(msg):
+        b = len(msg)+20
+        print("-"*b)
+        print(msg.center(b))
+        print("-"*b)
+
+
+  if bmi < 18.5:
+    msg("Underweight, your BMI is {:.2f}".format(bmi))
+  elif bmi >= 18.5 and bmi < 25:
+    msg(f"Normal weight, your BMI is {bmi}")
+  elif bmi >= 25 and bmi < 30:
+    msg(f"overweight, your BMI is {bmi}")
+  elif bmi >= 30 and bmi < 35:
+    msg(f"obese, your BMI is {bmi}")
+  else:
+    msg(f"Clinically obese, your BMI is {bmi}")
+  
+
+height = float(input("type your height in m: "))
+weight = float(input("type your weight in kg: "))
+
+BMI(height, weight)
