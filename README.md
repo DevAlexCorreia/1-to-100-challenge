@@ -28,3 +28,4 @@ Code 26 - Positive Numbers - With Java<br />
 Code 27 - Positive Numbers with Average - With Java<br />
 Code 28 - Even,Odd,Positive,Negative - With Java<br />
 Code 29 - Range - With Java<br />
+Code 33 - BMI Calculator - With python<br />
