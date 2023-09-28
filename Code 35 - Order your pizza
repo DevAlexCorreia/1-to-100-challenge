@@ -1,0 +1,114 @@
+price = 0
+def msg(msg):
+    tam = len(msg)+20
+    print("-"*tam)
+    print(msg.center(tam))
+    print("-"*tam)
+
+
+def paythebill(bill):#pay the bill function    
+    if bill == True:
+        msg("The Bill has been paid")
+
+
+def extra_menu():
+    global price
+    sauce = ["pepper", "salt", "vinegar", "garlic powder"]
+    cheese = ["cheddar", "mozzarella", "cottage", "snack cheese"]
+    vinegar = ["apple", "rice", "organic"]
+    extra = ["pepperoni", "onion","arugula", "cucumber","pickle"]
+
+    sauce_question = input("Will you put some sauce? ")  
+    
+    if sauce_question == 'yes': 
+        price +=2       
+        print("The option are:")
+        for sauces in sauce:            
+            print("* ",sauces)
+        sauce_type = str(input("which one do you want to add? "))#pepper
+        
+        try:
+            sauce_kind = sauce.index(sauce_type,0)   #<<<<< pepper
+            print(f"{sauce_type} has been added")
+        except ValueError:
+            print(f"{sauce_type} is not in the list")
+
+    cheese_question = input("How about cheese? ")
+    if cheese_question == 'yes':
+        price +=2.5
+        print("The option are:")
+        for cheeses in cheese:            
+            print("* ",cheeses)
+        cheese_type = str(input("which one do you want to add? "))#pepper
+        
+        try:
+            cheese_kind = cheese.index(cheese_type,0)   #<<<<< pepper
+            print(f"{cheese_type} has been added")
+        except ValueError:
+            print(f"{cheese_type} is not in the list")
+
+    vinegar_question = input("How about vinegar? ")
+    if vinegar_question == 'yes':
+        price +=2.5
+        print("The option are:")
+        for vinegars in vinegar:            
+            print("* ",vinegars)
+        vinegar_type = str(input("which one do you want to add? "))#pepper
+        
+        try:
+            vinegar_kind = vinegar.index(vinegar_type,0)   #<<<<< pepper
+            print(f"{vinegar_type} has been added")
+        except ValueError:
+            print(f"{vinegar_type} is not in the list")
+
+    extra_question = input("How about extra? ")
+    if extra_question == 'yes':
+        price +=2.5
+        print("The option are:")
+        for extras in extra:            
+            print("* ",extras)
+        extra_type = str(input("which one do you want to add? "))#pepper
+        
+        try:
+            extra_kind = extra.index(extra_type,0)   #<<<<< pepper
+            print(f"{extra_type} has been added")
+        except ValueError:
+            print(f"{extra_type} is not in the list")
+
+
+def buiynPizza(size):
+    global price
+    if size == "small":
+        msg(f"the {size} pizza has 25cm size")
+        stats = input("will you confirm that? ")
+        if stats == "yes":
+            price += float(15)
+            extra_menu()
+        else:
+            msg("Set another size of pizza!")
+    elif size == "medium":
+        msg(f"the {size} pizza has 30cm size")
+        stats = input("will you confirm that? ")
+        if stats == "yes":
+            price += float(20)
+            extra_menu()
+        else:
+            msg("Set another size of pizza!")
+    elif size == "large":
+        msg(f"the {size} pizza has 35cm size")
+        stats = input("will you confirm that? ")
+        if stats == "yes":
+            price += float(25)
+            extra_menu()
+        else:
+            msg("Set another size of pizza!")
+    msg("The total bill is $%.2f" %price)
+    bill = input("Do you want to pay the bill now? ")
+    if bill == "yes" or bill=="Yes" or bill=="YES":
+        paythebill(True)
+    msg("Enjoy your pizza")
+    
+
+size = input("What size your pizza will be? ")
+
+buiynPizza(size)
