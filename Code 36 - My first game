@@ -1,0 +1,42 @@
+def msg(msg):
+    t = len(msg)+20
+    print("*"*t)
+    print(msg.center(t))
+    print("*"*t)
+
+def choose_a_door():
+
+    color = input()
+    if color == 'red'.lower():
+        print("Burned by fire")
+        msg("Game over!")
+    elif color == 'blue':
+        msg("Game Over!")
+    else:
+        msg("Congratulations, You Win!")
+
+
+def Question_1():
+    Question_1 = input("Will you go to swim or wait? ")
+    
+    if Question_1 == "yes".lower():        
+        msg("You got shark attacked, Game Over!")
+    else:
+        msg("you got stuck, choose the right door between those three")
+        print("* red\n* blue \n* yellow\n")        
+        choose_a_door()
+
+
+def left_or_right(side):
+    
+    if side == "left".lower():
+        Question_1()
+    else:
+        msg("you fall into a ravin, you dead, Game Over!")
+
+
+msg1 = "Welcome to Treasure island, Your mission is to find the treasure."
+msg(msg1)
+
+choose_your_side = input("Choose your side: ")
+left_or_right(choose_your_side)
