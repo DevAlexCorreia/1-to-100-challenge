@@ -32,3 +32,4 @@ Code 33 - BMI Calculator - With Python<br />
 Code 34 - Roaller Coaster - With Python</br>
 Code 35 - Order your pizza - With Python<br />
 Code 36 - My first game - With Python<br />
+Code 37 - Rock, Paper or Scissors - With Python</br>
