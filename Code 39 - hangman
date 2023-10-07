@@ -1,26 +1,29 @@
 import random
 import os
+
 #Creating lists
 word_list = (["crossover","crazy","school","challenge","script","color","icebox","selfless","incridable"])
-display = []
-wrong_answer = []
-lives = 6
-game = True
+display = [] #screen
+wrong_answer = [] #wrong answers list
+lives = 6 #static number of lives
+game = True #game start status
 
-chosen_word = random.choice(word_list)
-words_lenght = len(chosen_word)
+#make it easier variables
+chosen_word = random.choice(word_list) #it chose a random word into word_list's list
+words_lenght = len(chosen_word)#get the chosen word's lenght
 
 # add blank spaces into displays list
-for words in range(words_lenght):    
-        display += "_"
+for words in range(words_lenght):   #fullfil the display list with underscores -> "_" 
+        display += "_" #every loop increases the screen's list
 
+#menssage function
 def msg(msg):
     aux = len(msg)+20
     print("*"*aux)
     print(msg.center(aux))
     print("*"*aux)
 
-# replacing input letters into displays blank spaces
+#lives ascii art function
 def lives_func(lives):
     
     if lives == 6:
@@ -92,28 +95,37 @@ def lives_func(lives):
               |
         =========''')
 
+#The game
 while game == True:  
-    os.system('cls')
-    print(f"Wrong Answers list: {wrong_answer}")
-    print(f"You got: {lives} lives")      
-    lives_func(lives)
-    print(display)
-    print(f"The word has {len(display)} letters")
-    guess = str(input("guess a letter: ").lower())    
-        
-    for position in range(words_lenght):
-        letter = chosen_word[position]#spliting the guess            
-        if letter == guess:
-            display[position] = letter
-            
-    if guess not in chosen_word:
-        lives -=1        
-        wrong_answer += guess
-
-    if lives == 0:
-        print(f"you lose, the word was {chosen_word}")
-        game = False    
     
+    print(f"Wrong Answers list: {wrong_answer}")    #Wrong answers list
+    print(f"You got: {lives} lives")       #Number of lives
+    lives_func(lives) #Life function with current variable stats and ascii art
+    print(display) #printing display updates
+    print(f"The word has {len(display)} letters")  #the number of characters in the word
+    guess = str(input("guess a letter: ").lower())  #guess input
+    os.system('cls')   #object that cleans the terminal screen after loops
+
+    #condition that checks if a guess letter was setted already
+    if guess in display:
+        print(f"You've already guessed {guess}")
+
+    #for loop that add a letter into display's list
+    for position in range(words_lenght):
+        letter = chosen_word[position]#spliting the guess                    
+        if letter == guess:#condition that check if the guess letter is already into letter's variable
+            display[position] = letter#takes the letter and set it into display current position
+    
+    #condition that checks if the current guess is inside of the chosen word
+    if guess not in chosen_word:
+        lives -=1        #if it is true decrease 1 unit of lives
+        wrong_answer += guess #set the wrong letter into wrong answers list
+        #condition that check if lives are done
+        if lives == 0:
+            lives_func(lives)#setting the ascii art of the last position
+            print(f"you lose, the word was {chosen_word}")#printing the correct word
+            game = False   # setting the end of the game 
+    # condition that checks if has any blank spaces left
     if "_" not in display:        
-        msg("Congratulations, you got the right word")
-        game = False
+        msg("Congratulations, you got the right word")#winning menssage
+        game = False #setting the end of the game
