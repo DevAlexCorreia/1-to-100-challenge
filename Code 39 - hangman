@@ -1,0 +1,119 @@
+import random
+import os
+#Creating lists
+word_list = (["crossover","crazy","school","challenge","script","color","icebox","selfless","incridable"])
+display = []
+wrong_answer = []
+lives = 6
+game = True
+
+chosen_word = random.choice(word_list)
+words_lenght = len(chosen_word)
+
+# add blank spaces into displays list
+for words in range(words_lenght):    
+        display += "_"
+
+def msg(msg):
+    aux = len(msg)+20
+    print("*"*aux)
+    print(msg.center(aux))
+    print("*"*aux)
+
+# replacing input letters into displays blank spaces
+def lives_func(lives):
+    
+    if lives == 6:
+        print('''
+          +---+
+          |   |
+              |
+              |
+              |
+              |
+        =========''')
+    elif lives == 5:
+        print("""
+          +---+
+          |   |
+          O   |
+              |
+              |
+              |
+        =========""")
+    elif lives == 4:
+        print('''
+
+          +---+
+          |   |
+          O   |
+          |   |
+              |
+              |
+        =========''')
+    elif lives == 3:
+        print('''
+
+          +---+
+          |   |
+          O   |
+         /|   |
+              |
+              |
+        =========''')
+    elif lives == 2:
+        print('''
+
+          +---+
+          |   |
+          O   |
+         /|\  |
+              |
+              |
+        =========''')
+    elif lives == 1:
+        print('''
+
+          +---+
+          |   |
+          O   |
+         /|\  |
+         /    |
+              |
+        =========''')
+    else:
+        print('''
+
+          +---+
+          |   |
+          O   |
+         /|\  |
+         / \  |
+              |
+        =========''')
+
+while game == True:  
+    os.system('cls')
+    print(f"Wrong Answers list: {wrong_answer}")
+    print(f"You got: {lives} lives")      
+    lives_func(lives)
+    print(display)
+    print(f"The word has {len(display)} letters")
+    guess = str(input("guess a letter: ").lower())    
+        
+    for position in range(words_lenght):
+        letter = chosen_word[position]#spliting the guess            
+        if letter == guess:
+            display[position] = letter
+            
+    if guess not in chosen_word:
+        lives -=1        
+        wrong_answer += guess
+
+    if lives == 0:
+        print(f"you lose, the word was {chosen_word}")
+        game = False    
+    
+    if "_" not in display:        
+        msg("Congratulations, you got the right word")
+        game = False
